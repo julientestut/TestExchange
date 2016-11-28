@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href='center2.xsl' type='text/xsl'?>
+<uc:updates version='1.0' xmlns:uc='http://xmlns.oracle.com/jdeveloper/updatecenter'>
+
+  <ub:update id="bdc3559c-3716-4cfc-b6d9-158b3e3a1f28" type='diGlobalImport' xmlns:ub="http://xmlns.oracle.com/jdeveloper/update">
+    <ub:name>IKM MSSQL Azure SQLDW - PDW Incremental Update</ub:name>
+    <ub:version>1.0</ub:version>
+    <ub:author>Tim Garrod</ub:author>
+    <ub:author-url></ub:author-url>
+    <ub:description>
+IKM to perform Incremental Update operations in Azure SQL DataWarehouse or PDW.   
+
+	Customizations for SQLDW :
+		Identiy and Sequences
+			At time of release SQLDW does not support IDENTITY or SEQUENCES.  
+			Typical work-around for this functionality in SQLDW is to perform the following: ( SELECT MAX(ID) FROM TARGET_TABLE ) + ROW_NUMBER() 
+			The KM auto-generates this code using the UD1 property on the target column (See KM description for more details)
+		Flow Table Creation (DISTRIBUTION and Table Type)
+			Flow Table is created using CTAS.
+			Flow table type can be control by Option (HEAP, CLUSTERED COLUMNSTORE, CLUSTERED INDEX)
+			Flow table index will only be created if the table type is HEAP.
+			Flow table DISTRIBUTION is dynamically determined based on the target tables distribution and the update key
+			
+	Pre-Req:   This Knowledge Module requires the Microsoft SQL Server Azure SQLDW _ PDW Technology.   The technology can be manually downloaded from the Java.NET site and can be 	
+			   found here : https://java.net/projects/oracledi/downloads/directory/ODI/Technologies.
+	</ub:description>
+	<ub:category>(IKM) - Integration Knowledge Modules</ub:category>
+	<ub:bundle-url>https://github.com/julientestut/TestExchange/blob/master/KMs/KM_IKM_MSSQL_Azure_PDW_Incremental_Update.zip</ub:bundle-url>
+    <ub:destination>${oracle.odi.home}</ub:destination>
+  </ub:update>
+  
+</uc:updates>
