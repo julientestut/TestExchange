@@ -25,7 +25,7 @@ IKM to perform Incremental Update operations in Azure SQL DataWarehouse or PDW.
 			   found here : https://java.net/projects/oracledi/downloads/directory/ODI/Technologies.
 	</ub:description>
 	<ub:category>(IKM) - Integration Knowledge Modules</ub:category>
-	<ub:bundle-url>https://github.com/julientestut/TestExchange/blob/master/KMs/KM_IKM_MSSQL_Azure_PDW_Incremental_Update.zip</ub:bundle-url>
+	<ub:bundle-url>https://github.com/julientestut/TestExchange/raw/master/KMs/KM_IKM_MSSQL_Azure_PDW_Incremental_Update.zip</ub:bundle-url>
     <ub:destination>${oracle.odi.home}</ub:destination>
   </ub:update>
   
