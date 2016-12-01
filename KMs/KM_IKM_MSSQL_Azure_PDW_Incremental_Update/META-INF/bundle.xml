@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<update-bundle version="1.0"
+               xmlns="http://xmlns.oracle.com/jdeveloper/updatebundle"
+               xmlns:u="http://xmlns.oracle.com/jdeveloper/update">
+  <u:update id="oracle.odi.km.lkm.datapumpplus">
+    <u:name>LKM Oracle to Oracle Datapump Plus</u:name>
+    <u:version>11.1.1.8.0</u:version>
+    <u:author>ODI A-Team</u:author>
+    <u:author-url>http://www.ateam-oracle.com/using-oracle-data-pump-in-oracle-data-integrator-odi/ </u:author-url>
+    <u:description>
+      This is an enhanced version of the LKM Oracle to Oracle (datapump). 
+	  For details, go to http://www.ateam-oracle.com/using-oracle-data-pump-in-oracle-data-integrator-odi/
+    </u:description>
+    <u:requirements>
+      <u:requires-extension id="oracle.jdeveloper"
+                            minVersion="11.1.1.5.0"
+                            maxVersion="12.1.4.0.0" />
+    </u:requirements> 
+  </u:update>
+</update-bundle>
